@@ -1,5 +1,5 @@
 import { useRef,useState } from "react";
-
+import React from 'react';
 export function CountdownTimer() {
   const [curentTime, setCurentTime] = useState(10);
   const intervalId = useRef<number>();

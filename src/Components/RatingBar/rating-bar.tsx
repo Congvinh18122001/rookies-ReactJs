@@ -1,6 +1,6 @@
 import './rating-bar.css';
 import {useState} from 'react'
-
+import React from 'react';
 export interface IRatingBarProps{
     max:number;
 }

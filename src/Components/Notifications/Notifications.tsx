@@ -1,14 +1,15 @@
 import "./Notifications.css";
 import { useState } from "react";
-
+import React from 'react';
 export interface IItemControlProps {
   id: number;
   typeControl: string;
 }
 
 export const ItemControl = ({ typeControl }: IItemControlProps) => {
-  const [checked, setChecked] = useState(false);
-  const handleClick = () => setChecked(!checked);
+  // const [checked, setChecked] = useState(false);
+  // const handleClick = () => setChecked(!checked);
+  //onClick={handleClick} checked={checked}
   return (
     <div className="row">
       <div className="col-sm-8 ">
@@ -17,7 +18,7 @@ export const ItemControl = ({ typeControl }: IItemControlProps) => {
       </div>
       <div className="col-sm-4">
         <label className="switch">
-          <input type="checkbox" onClick={handleClick} checked={checked} />
+          <input type="checkbox"  />
           <span className="slider round"></span>
         </label>
       </div>
@@ -50,7 +51,7 @@ export const Notification = () => {
         <div className="control-box">
           <p>Control your notification and auto-follow settings.</p>
           {listItem.map((item) => (
-            <ItemControl {...item}></ItemControl>
+            <ItemControl key={item.id} {...item}></ItemControl>
           ))}
         </div>
       </div>
